@@ -36,14 +36,14 @@
 
 `chmod <specification> filename` - Change the ﬁle permissions <br>
   Speciﬁcations = { <br>
-  `u` - user 
-  `g` - group 
-  `o` - other 
-  `+` - add permission 
-  `-` - remove
-  `r` - read 
-  `w` - write 
-  `x` - execute.
+  `u` - user <br>
+  `g` - group <br>
+  `o` - other <br>
+  `+` - add permission <br>
+  `-` - remove <br>
+  `r` - read <br>
+  `w` - write <br>
+  `x` - execute. <br>
   } <br>
   
 `chmod -R <specification> dirname` - Change the permissions of a directory recursively. To change permission of a directory and everything within that directory, use this command <br>
