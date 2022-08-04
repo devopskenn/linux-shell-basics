@@ -30,3 +30,27 @@
 `mkdir dir-name` - Create a directory dir-name <br>
 `mkdir -p dir-name/dir-name` - Create a directory hierarchy. Create parent directories as needed, if they don't exist. You can specify multiple directories <br>
 `touch filename` - Create a ﬁle filename, if it doesn't exist, otherwise change the timestamp of the ﬁle to current time 
+
+
+### Directory Permissions and Groups
+
+`chmod <specification> filename` - Change the ﬁle permissions <br>
+  Speciﬁcations = { <br>
+  `u` - user 
+  `g` - group 
+  `o` - other 
+  `+` - add permission 
+  `-` - remove
+  `r` - read 
+  `w` - write 
+  `x` - execute.
+  } <br>
+  
+`chmod -R <specification> dirname` - Change the permissions of a directory recursively. To change permission of a directory and everything within that directory, use this command <br>
+`chmod go=+r myfile` - Add read permission for the owner and the group <br>
+`chmod a +rwx myfile` - Allow all users to read, write or execute myfile <br>
+`chmod go -r myfile` - Remove read permission from the group and others <br>
+`chown owner1 filename` - Change ownership of a ﬁle to user owner1 <br>
+`chgrp grp_owner filename` - Change primary group ownership of ﬁle filename to group `grp_owner`. Change primary group ownership of directory `dir-name` to group `grp_owner` <br>
+`chgrp -R grp_owner dir-name` - recursively. To change group ownership of a directory and everything within
+that directory, use this command
