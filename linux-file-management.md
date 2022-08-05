@@ -20,7 +20,11 @@
 
 ### Copy, Paste, and Remove
 
-`cp -p source destination` - Will copy the ﬁle from source to destination. -p stands for preservation. It preserves the original attributes of ﬁle while copying like ﬁle owner, timestamp, group, permissions etc <br>
+Will copy the ﬁle from source to destination. -p stands for preservation. It preserves the original attributes of ﬁle while copying like ﬁle owner, timestamp, group, permissions etc <br>
+```
+cp -p source destination
+```
+
 `cp -R source_dir destination_dir` - Will copy source directory to speciﬁed destination recursively <br>
 `mv file1 file2` - In Linux there is no rename command as such. Hence mv moves/renames the ﬁle1 to ﬁle2 <br>
 `rm -i filename` - Asks you before every ﬁle removal for conﬁrmation. IF YOU ARE A NEW USER TO LINUX COMMAND LINE, YOU SHOULD ALWAYS USE rm -i. You can specify multiple ﬁles <br>
