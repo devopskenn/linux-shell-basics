@@ -22,27 +22,61 @@
 
 Copy the ﬁle from source to destination. -p stands for preservation. It preserves the original attributes of ﬁle while copying like ﬁle owner, timestamp, group, permissions etc.
 ``` sh
-cp -p source destination
+cp -p source_dir destination_dir
 ```
 
-Will copy source directory to speciﬁed destination recursively
+Copy source directory to speciﬁed destination recursively
 ``` sh
 cp -R source_dir destination_dir
 ````
 
-`mv file1 file2` - In Linux there is no rename command as such. Hence mv moves/renames the ﬁle1 to ﬁle2 <br>
-`rm -i filename` - Asks you before every ﬁle removal for conﬁrmation. IF YOU ARE A NEW USER TO LINUX COMMAND LINE, YOU SHOULD ALWAYS USE rm -i. You can specify multiple ﬁles <br>
-`rm -R dir-name` - Will remove the directory dir-name recursively <br>
-`rm -rf dir-name` - Will remove the directory dir recursively, ignoring non-existent ﬁles and will never prompt for anything. BE CAREFUL USING THIS COMMAND! You can specify multiple directories <br>
-`rmdir dir-name` - Will remove the directory dir-name, if it's empty. This command can only remove empty directories <br>
-`mkdir dir-name` - Create a directory dir-name <br>
-`mkdir -p dir-name/dir-name` - Create a directory hierarchy. Create parent directories as needed, if they don't exist. You can specify multiple directories <br>
-`touch filename` - Create a ﬁle filename, if it doesn't exist, otherwise change the timestamp of the ﬁle to current time 
+In Linux there is no rename command as such. Hence mv moves/renames the ﬁle_1 to ﬁle_2
+```sh
+mv file1 file2
+```
+
+To remove/delete a file. It asks you before every ﬁle removal for conﬁrmation. IF YOU ARE A NEW USER TO LINUX COMMAND LINE, YOU SHOULD ALWAYS USE rm -i. You can specify multiple ﬁles
+```sh
+rm -i filename
+```
+
+To remove the directory dir-name recursively <br>
+```sh
+rm -R dir-name
+```
+
+To remove the directory dir recursively, ignoring non-existent ﬁles and will never prompt for anything. BE CAREFUL USING THIS COMMAND! You can specify multiple directories
+```sh
+rm -rf dir-name
+```
+
+To remove the directory dir-name, if it's empty. This command can only remove empty directories
+```sh
+rmdir dir-name
+```
+
+Create a directory dir-name
+```sh
+mkdir dir-name
+```
+
+Create a directory hierarchy. Create parent directories as needed, if they don't exist. You can specify multiple directories
+```sh
+mkdir -p dir-name/dir-name
+```
+
+Create a ﬁle filename, if it doesn't exist, otherwise change the timestamp of the ﬁle to current time 
+```sh
+touch filename
+```
 
 
 ### Directory Permissions and Groups
 
-`chmod <specification> filename` - Change the ﬁle permissions <br>
+Change the ﬁle permissions
+```sh
+chmod <specification> filename
+```
   Speciﬁcations = { <br>
   `u` - user <br>
   `g` - group <br>
@@ -52,13 +86,42 @@ cp -R source_dir destination_dir
   `r` - read <br>
   `w` - write <br>
   `x` - execute. <br>
-  } <br>
-  
-`chmod -R <specification> dirname` - Change the permissions of a directory recursively. To change permission of a directory and everything within that directory, use this command <br>
-`chmod go=+r myfile` - Add read permission for the owner and the group <br>
-`chmod a +rwx myfile` - Allow all users to read, write or execute myfile <br>
-`chmod go -r myfile` - Remove read permission from the group and others <br>
-`chown owner1 filename` - Change ownership of a ﬁle to user owner1 <br>
-`chgrp grp_owner filename` - Change primary group ownership of ﬁle filename to group `grp_owner`. Change primary group ownership of directory `dir-name` to group `grp_owner` <br>
-`chgrp -R grp_owner dir-name` - recursively. To change group ownership of a directory and everything within
-that directory, use this command
+  }
+
+
+#### Change the permissions of a directory recursively. 
+
+To change permission of a directory and everything within that directory, use this command
+```sh
+chmod -R <specification> dirname
+```
+
+Add read permission for the owner and the group
+```sh
+chmod go=+r myfile
+```
+
+Allow all users to read, write or execute myfile
+```sh
+chmod a +rwx myfile
+```
+
+Remove read permission from the group and others
+```sh
+chmod go -r myfile
+```
+
+Change ownership of a ﬁle to user owner1
+```sh
+chown owner1 filename
+```
+
+Change primary group ownership of ﬁle filename to group `grp_owner`. Change primary group ownership of directory `dir-name` to group `grp_owner`
+```sh
+chgrp grp_owner filename
+```
+
+To change group ownership of a directory and everything within that directory, use this command
+```sh
+chgrp -R grp_owner dir-name
+```
